@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		43A486411F16E73200D5E9CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A486401F16E73200D5E9CA /* AppDelegate.swift */; };
-		43A486431F16E73200D5E9CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A486421F16E73200D5E9CA /* ViewController.swift */; };
 		43A486461F16E73200D5E9CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A486441F16E73200D5E9CA /* Main.storyboard */; };
 		43A486481F16E73200D5E9CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A486471F16E73200D5E9CA /* Assets.xcassets */; };
 		43A4864B1F16E73200D5E9CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A486491F16E73200D5E9CA /* LaunchScreen.storyboard */; };
+		43A486531F16E86600D5E9CA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A486521F16E86600D5E9CA /* Note.swift */; };
+		43A486571F16EA5700D5E9CA /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A486561F16EA5700D5E9CA /* NoteController.swift */; };
+		43A4865C1F16EDBC00D5E9CA /* NoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4865B1F16EDBC00D5E9CA /* NoteListTableViewController.swift */; };
+		43A4865E1F16F42F00D5E9CA /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4865D1F16F42F00D5E9CA /* NoteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43A4863D1F16E73200D5E9CA /* Notes2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A486401F16E73200D5E9CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43A486421F16E73200D5E9CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43A486451F16E73200D5E9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43A486471F16E73200D5E9CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43A4864A1F16E73200D5E9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43A4864C1F16E73200D5E9CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43A486521F16E86600D5E9CA /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		43A486561F16EA5700D5E9CA /* NoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteController.swift; path = ../NoteController.swift; sourceTree = "<group>"; };
+		43A4865B1F16EDBC00D5E9CA /* NoteListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteListTableViewController.swift; path = ../NoteListTableViewController.swift; sourceTree = "<group>"; };
+		43A4865D1F16F42F00D5E9CA /* NoteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		43A4863F1F16E73200D5E9CA /* Notes2 */ = {
 			isa = PBXGroup;
 			children = (
+				43A486541F16EA0400D5E9CA /* Model */,
+				43A486581F16ED6E00D5E9CA /* Model Controller */,
+				43A4865F1F16FA4100D5E9CA /* View Controllers */,
+				43A486551F16EA2600D5E9CA /* Resources */,
+			);
+			path = Notes2;
+			sourceTree = "<group>";
+		};
+		43A486541F16EA0400D5E9CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43A486521F16E86600D5E9CA /* Note.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		43A486551F16EA2600D5E9CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				43A486401F16E73200D5E9CA /* AppDelegate.swift */,
-				43A486421F16E73200D5E9CA /* ViewController.swift */,
 				43A486441F16E73200D5E9CA /* Main.storyboard */,
 				43A486471F16E73200D5E9CA /* Assets.xcassets */,
 				43A486491F16E73200D5E9CA /* LaunchScreen.storyboard */,
 				43A4864C1F16E73200D5E9CA /* Info.plist */,
 			);
-			path = Notes2;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		43A486581F16ED6E00D5E9CA /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43A486561F16EA5700D5E9CA /* NoteController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		43A4865F1F16FA4100D5E9CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43A4865B1F16EDBC00D5E9CA /* NoteListTableViewController.swift */,
+				43A4865D1F16F42F00D5E9CA /* NoteDetailViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A486431F16E73200D5E9CA /* ViewController.swift in Sources */,
 				43A486411F16E73200D5E9CA /* AppDelegate.swift in Sources */,
+				43A486571F16EA5700D5E9CA /* NoteController.swift in Sources */,
+				43A4865E1F16F42F00D5E9CA /* NoteDetailViewController.swift in Sources */,
+				43A486531F16E86600D5E9CA /* Note.swift in Sources */,
+				43A4865C1F16EDBC00D5E9CA /* NoteListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
